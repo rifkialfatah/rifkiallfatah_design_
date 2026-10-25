@@ -1,122 +1,85 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="portfolio">
+      <nav className="navbar">
+        <a href="#beranda" className="brand">
+          RIFKI ALFATAH DESIGN
+        </a>
+
+        <div className="nav-links">
+          <a href="#beranda">Beranda</a>
+          <a href="#karya">Karya</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#kontak">Kontak</a>
         </div>
-        <div>
-          <h1>Get started</h1>
+      </nav>
+
+      <main>
+        <section className="hero" id="beranda">
+          <div className="hero-content">
+            <p className="hero-label">DESIGN PORTFOLIO</p>
+            <h1>
+              Turning Ideas Into
+              <span> Visual Stories.</span>
+            </h1>
+            <p className="hero-description">
+              Halo! Saya Rifki Alfatah, seorang desainer yang
+              mengeksplorasi kreativitas melalui poster, desain
+              media sosial, banner, dan berbagai karya visual.
+            </p>
+
+            <a href="#karya" className="primary-button">
+              Jelajahi Karya Saya ↗
+            </a>
+          </div>
+
+          <div className="hero-art">
+            <div className="art-card art-card-back">CREATIVE</div>
+            <div className="art-card art-card-front">
+              <span>R</span>
+              <p>RIFKI ALFATAH</p>
+              <small>DESIGNER & CREATIVE</small>
+            </div>
+          </div>
+        </section>
+
+        <section className="works" id="karya">
+          <div className="section-heading">
+            <div>
+              <p className="hero-label">SELECTED PROJECTS</p>
+              <h2>Karya Pilihan</h2>
+            </div>
+            <p>Beberapa karya visual yang saya buat.</p>
+          </div>
+
+          <div className="empty-works">
+            <span>✦</span>
+            <h3>Karya kreatif akan tampil di sini</h3>
+            <p>
+              Nantinya karya dari data yang ditambahkan akan
+              ditampilkan di bagian ini.
+            </p>
+          </div>
+        </section>
+
+        <section className="about" id="tentang">
+          <p className="hero-label">ABOUT ME</p>
+          <h2>Creativity with Purpose.</h2>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Saya tertarik pada desain visual, branding, dan
+            pengembangan identitas visual untuk berbagai kegiatan.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <footer id="kontak">
+          <h2>Let’s Create Something Great.</h2>
+          <p>RIFKI ALFATAH DESIGN © 2026</p>
+        </footer>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

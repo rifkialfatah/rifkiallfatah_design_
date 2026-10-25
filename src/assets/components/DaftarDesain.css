@@ -1,4 +1,3 @@
-
 .daftar-desain {
   width: min(100% - 40px, 1100px);
   margin: 32px auto;
@@ -90,3 +89,4 @@
     grid-template-columns: 1fr;
   }
 }
+
