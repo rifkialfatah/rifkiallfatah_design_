@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
 import KartuDesain from './KartuDesain';
+
 import poster1 from '../poster 1.png';
 import poster2 from '../poster 2.png';
 import poster3 from '../poster 3.png';
+
 import './DaftarDesain.css';
 
 const dataDesainAwal = [
@@ -29,24 +31,28 @@ const dataDesainAwal = [
   },
 ];
 
-function DaftarDesain({
-  daftarDesain = dataDesainAwal,
-  onHapus,
-}) {
+function DaftarDesain({ daftarDesain, onHapus }) {
   const [kataKunci, setKataKunci] = useState('');
   const [kategoriAktif, setKategoriAktif] = useState('Semua');
+
+  // Gunakan data dari App.jsx jika tersedia.
+  // Jika belum tersedia, tampilkan tiga poster awal.
+  const dataYangDitampilkan =
+    Array.isArray(daftarDesain) && daftarDesain.length > 0
+      ? daftarDesain
+      : dataDesainAwal;
 
   const daftarKategori = useMemo(
     () => [
       'Semua',
       ...new Set(
-        daftarDesain.map((desain) => desain.kategori)
+        dataYangDitampilkan.map((desain) => desain.kategori)
       ),
     ],
-    [daftarDesain]
+    [dataYangDitampilkan]
   );
 
-  const hasilFilter = daftarDesain.filter((desain) => {
+  const hasilFilter = dataYangDitampilkan.filter((desain) => {
     const cocokNama = desain.nama
       .toLowerCase()
       .includes(kataKunci.toLowerCase());
@@ -57,6 +63,12 @@ function DaftarDesain({
 
     return cocokNama && cocokKategori;
   });
+
+  const handleHapus = (id) => {
+    if (onHapus) {
+      onHapus(id);
+    }
+  };
 
   return (
     <section className="daftar-desain">
@@ -73,18 +85,14 @@ function DaftarDesain({
         <input
           type="search"
           value={kataKunci}
-          onChange={(event) =>
-            setKataKunci(event.target.value)
-          }
+          onChange={(event) => setKataKunci(event.target.value)}
           placeholder="Cari nama karya..."
           aria-label="Cari nama karya"
         />
 
         <select
           value={kategoriAktif}
-          onChange={(event) =>
-            setKategoriAktif(event.target.value)
-          }
+          onChange={(event) => setKategoriAktif(event.target.value)}
           aria-label="Filter kategori"
         >
           {daftarKategori.map((kategori) => (
@@ -101,7 +109,7 @@ function DaftarDesain({
             <KartuDesain
               key={desain.id}
               desain={desain}
-              onHapus={onHapus}
+              onHapus={() => handleHapus(desain.id)}
             />
           ))}
         </div>

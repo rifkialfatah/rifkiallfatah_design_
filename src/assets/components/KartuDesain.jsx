@@ -1,7 +1,6 @@
-
 import './KartuDesain.css';
 
-function KartuDesain({ desain, onHapus }) {
+function KartuDesain({ desain, onLihatDetail }) {
   return (
     <article className="kartu-desain">
       <div className="kartu-desain-preview">
@@ -24,10 +23,10 @@ function KartuDesain({ desain, onHapus }) {
 
         <button
           type="button"
-          className="kartu-desain-hapus"
-          onClick={() => onHapus(desain.id)}
+          className="kartu-desain-detail"
+          onClick={() => onLihatDetail?.(desain)}
         >
-          Hapus karya
+          Lihat Detail →
         </button>
       </div>
     </article>
