@@ -14,3 +14,23 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+
+Penjelasan tugas :
+RIFKI ALFATAH DESIGN merupakan website portofolio desain grafis yang dibuat untuk menampilkan berbagai karya desain visual. Website ini dikembangkan sebagai bagian dari tugas individu mata kuliah Perancangan dan Pemrograman Web.
+
+Website ini menjadi media untuk memperkenalkan profil desainer serta menampilkan hasil karya yang telah dibuat, seperti poster dan berbagai desain visual lainnya.
+
+Tujuan
+
+Tujuan pengembangan website ini adalah:
+
+Menampilkan portofolio karya desain grafis secara digital.
+
+Memperkenalkan profil dan identitas desainer.
+
+Mengelompokkan karya berdasarkan kategori desain.
+
+Menyediakan antarmuka website yang menarik, rapi, dan responsif.
+
+Menerapkan penggunaan React dan komponen dalam pengembangan website.
