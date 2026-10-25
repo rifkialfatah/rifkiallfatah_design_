@@ -35,8 +35,6 @@ function DaftarDesain({ daftarDesain, onHapus }) {
   const [kataKunci, setKataKunci] = useState('');
   const [kategoriAktif, setKategoriAktif] = useState('Semua');
 
-  // Gunakan data dari App.jsx jika tersedia.
-  // Jika belum tersedia, tampilkan tiga poster awal.
   const dataYangDitampilkan =
     Array.isArray(daftarDesain) && daftarDesain.length > 0
       ? daftarDesain
