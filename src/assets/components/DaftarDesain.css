@@ -1,0 +1,92 @@
+
+.daftar-desain {
+  width: min(100% - 40px, 1100px);
+  margin: 32px auto;
+}
+
+.daftar-desain-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.daftar-desain-heading h2 {
+  margin: 0 0 8px;
+  color: #0D47A1;
+}
+
+.daftar-desain-heading p {
+  margin: 0;
+  color: #52677F;
+}
+
+.daftar-desain-heading > span {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #E3F2FD;
+  color: #0D47A1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.daftar-desain-filter {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.daftar-desain-filter input,
+.daftar-desain-filter select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #90CAF9;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #0D47A1;
+}
+
+.daftar-desain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.daftar-desain-kosong {
+  padding: 40px 20px;
+  border: 1px dashed #90CAF9;
+  border-radius: 16px;
+  background: #E3F2FD;
+  text-align: center;
+}
+
+.daftar-desain-kosong h3 {
+  color: #0D47A1;
+}
+
+.daftar-desain-kosong p {
+  color: #52677F;
+}
+
+@media (max-width: 800px) {
+  .daftar-desain-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .daftar-desain {
+    width: calc(100% - 24px);
+  }
+
+  .daftar-desain-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .daftar-desain-grid {
+    grid-template-columns: 1fr;
+  }
+}
