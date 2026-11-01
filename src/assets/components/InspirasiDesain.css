@@ -1,12 +1,13 @@
+
 .inspirasi-section {
-  padding: 70px 8%;
+  padding: 80px 8%;
   background: #E3F2FD;
 }
 
 .inspirasi-heading {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 35px;
+  margin: 0 auto 40px;
 }
 
 .inspirasi-label {
@@ -14,4 +15,160 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+.inspirasi-heading h2 {
+  color: #0D47A1;
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.inspirasi-heading p {
+  color: #52677C;
+  line-height: 1.7;
+}
+
+.inspirasi-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #176B43;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.success-dot {
+  width: 9px;
+  height: 9px;
+  background: #2EAD70;
+  border-radius: 50%;
+}
+
+.inspirasi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.inspirasi-card {
+  background: #FFFFFF;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #C8E2F8;
+  box-shadow: 0 5px 20px rgba(13, 71, 161, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+}
+
+.inspirasi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.14);
+}
+
+.inspirasi-number {
+  display: inline-block;
+  background: #E3F2FD;
+  color: #0D47A1;
+  padding: 8px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.inspirasi-card-content span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #2196F3;
+}
+
+.inspirasi-card h3 {
+  color: #0D47A1;
+  font-size: 17px;
+  margin: 12px 0;
+  line-height: 1.5;
+  text-transform: capitalize;
+  overflow-wrap: anywhere;
+}
+
+.inspirasi-card p {
+  color: #61758A;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.inspirasi-status {
+  text-align: center;
+  padding: 45px 20px;
+  color: #0D47A1;
+}
+
+.loading-spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #BBDEFB;
+  border-top-color: #2196F3;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: berputar 0.8s linear infinite;
+}
+
+@keyframes berputar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-status {
+  background: #FFFFFF;
+  border: 1px solid #F3C4C4;
+  border-radius: 12px;
+}
+
+.error-status h3 {
+  color: #C62828;
+}
+
+.error-status p {
+  color: #666666;
+}
+
+.error-status button {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.error-status button:hover {
+  background: #0D47A1;
+}
+
+@media (max-width: 900px) {
+  .inspirasi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .inspirasi-section {
+    padding: 50px 5%;
+  }
+
+  .inspirasi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inspirasi-heading h2 {
+    font-size: 26px;
+  }
 }
