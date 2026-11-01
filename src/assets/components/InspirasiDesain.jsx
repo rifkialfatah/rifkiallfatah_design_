@@ -13,7 +13,7 @@ function InspirasiDesain() {
 
     try {
       const response = await fetch(
-        'https://jsonplaceholder.typicode.com/posts?_limit=6'
+        'https://jsonplaceholder.typicode.com/salah'
       );
 
       if (!response.ok) {
